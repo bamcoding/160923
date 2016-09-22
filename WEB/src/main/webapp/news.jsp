@@ -68,12 +68,13 @@
 		%>
 		<tr>
 			<td style="text-align: center;"><%=newsVO.getNewsId()%></td>
-			<td><%=newsVO.getSubject()%></td>
-			<td><%=newsVO.getContent()%></td>
-			<td><%=newsVO.getRecommendCount()%></td>
-			<td><%=newsVO.getJournalistVO().getJournalistName()%></td>
-			<td><%=newsVO.getCategoryVO().getCategoryId()%></td>
-			<td><%=newsVO.getCreatedDate()%></td>
+			<td style="text-align: left"><a
+				href="./detail.jsp?newsId=<%=newsVO.getNewsId()%>"> <%=newsVO.getSubject()%>
+			</a></td>
+			<td style="text-align: center;"><%=newsVO.getRecommendCount()%></td>
+			<td style="text-align: center;"><%=newsVO.getJournalistVO().getJournalistName()%></td>
+			<td style="text-align: center;"><%=newsVO.getCategoryVO().getCategoryName()%></td>
+			<td style="text-align: center;"><%=newsVO.getCreatedDate()%></td>
 		</tr>
 		<%
 			}

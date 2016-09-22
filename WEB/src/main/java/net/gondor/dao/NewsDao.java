@@ -19,7 +19,7 @@ public interface NewsDao {
 	 */
 	public List<CategoryVO> getAllCategories();
 	
-	
+	public List<CategoryVO> getAllLeafCategories();
 	/**
 	 * 선택한 카테고리가 리프 노드인지 확인하기
 	 * @param categoryId

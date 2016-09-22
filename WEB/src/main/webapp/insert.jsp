@@ -24,7 +24,7 @@
 		카테고리ID: <select name="categoryId">
 			<option>카테고리를 선택하세요</option>
 			<%
-				List<CategoryVO> categoryVOs = dao.getAllCategories();
+				List<CategoryVO> categoryVOs = dao.getAllLeafCategories();
 				for (CategoryVO categoryVO : categoryVOs) {
 			%>
 			<option value="<%=categoryVO.getCategoryId()%>"><%=categoryVO.getCategoryName()%></option>
@@ -50,8 +50,9 @@
 		<hr />
 		기사 내용:
 		<textarea name="contents" placeholder="내용을 입력하세요."
-			style="width: 500px; height: 300px"></textarea>
+			style="width: 500px; height: 300px"></textarea><hr/>
 		<input type="submit" value="기사 등록!" />
+		<input type="button" value="돌아가기" onclick="location.href='news.jsp'"/>
 		<!-- submit을 누르는 순간 do파일에 값을 전달합니다. -->
 	</form>
 </body>

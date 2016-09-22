@@ -16,6 +16,7 @@
 	
 	ArtclDao dao = new ArtclDaoImpl();
 	ArtclVO artcl = dao.getArtclById(artclId);
+	String content = artcl.getContent().replaceAll("<br/>", "\n");
 %>
 <h1>기사 수정하기</h1>
 	<form name="insertArtcl" method="post" action="./doEditArtcl.jsp?artclId=<%=artclId%>">
@@ -24,7 +25,7 @@
 			 style="width: 300px;" />
 		
 		<hr />
-		<textarea name="content" style="width: 400px; height: 400px;"><%=artcl.getContent() %></textarea>
+		<textarea name="content" style="width: 400px; height: 400px;"><%=content %></textarea>
 
 		<hr />
 		<input type="submit" value="수정하기" /> <input type="button" value="취소"

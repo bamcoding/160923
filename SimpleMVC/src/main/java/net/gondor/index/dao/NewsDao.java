@@ -2,9 +2,9 @@ package net.gondor.index.dao;
 
 import java.util.List;
 
-import net.gondor.vo.CategoryVO;
-import net.gondor.vo.JournalistVO;
-import net.gondor.vo.NewsVO;
+import net.gondor.index.vo.CategoryVO;
+import net.gondor.index.vo.JournalistVO;
+import net.gondor.index.vo.NewsVO;
 
 public interface NewsDao {
 	 

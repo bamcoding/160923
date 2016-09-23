@@ -8,5 +8,5 @@ public interface NewsBiz {
 	public List<NewsVO> getAllNewsesOf(int categoryId);
 	public boolean addNewNews(NewsVO news);
 	public NewsVO getNewAt(int newsId);
-	public boolean deleteNewsAt(int newsId);
+	public void deleteNewsAt(int newsId);
 }

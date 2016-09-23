@@ -17,25 +17,25 @@ public class NewsBizImpl implements NewsBiz{
 	@Override
 	public List<NewsVO> getAllNewsesOf(int categoryId) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getNewsesOf(categoryId);
 	}
 
 	@Override
 	public boolean addNewNews(NewsVO news) {
 		// TODO Auto-generated method stub
-		return false;
+		return dao.addNewNews(news);
 	}
 
 	@Override
 	public NewsVO getNewAt(int newsId) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.getNewsAt(newsId);
 	}
 
 	@Override
-	public boolean deleteNewsAt(int newsId) {
+	public void deleteNewsAt(int newsId) {
 		// TODO Auto-generated method stub
-		return false;
+		return dao.deleteNews(newsId);;
 	}
 
 }

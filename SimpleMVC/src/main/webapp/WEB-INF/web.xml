@@ -29,4 +29,14 @@
     <servlet-name>CalcServlet</servlet-name>
     <url-pattern>/list</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewsServlet</display-name>
+    <servlet-name>NewsServlet</servlet-name>
+    <servlet-class>net.gondor.index.web.NewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewsServlet</servlet-name>
+    <url-pattern>/news</url-pattern>
+  </servlet-mapping>
 </web-app>

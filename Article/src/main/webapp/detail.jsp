@@ -22,15 +22,15 @@
 <title><%=artclVO.getSubject()%></title>
 </head>
 <h1><%=artclVO.getSubject()%></h1>
-<body>
+<body bgcolor="eedddd">
 	<hr/>
-	<table border=1
+	<table
 		style="border-collaps: collaps; border: 1px solid black; width: 400px; height: 400px">
-		<tr style="height: 10%">
+		<tr  bgcolor=fffffff  style="height: 10%">
 			<th style="width:20%">제목</th>
 			<td><%=artclVO.getSubject()%></td>
 		</tr>
-		<tr>
+		<tr  bgcolor=fffffff >
 			<th style="width:20%">내용</th>
 			<td><%=artclVO.getContent()%></td>
 		</tr>

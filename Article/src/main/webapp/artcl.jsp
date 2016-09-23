@@ -28,12 +28,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ARTICLE</title>
 </head>
-<body>
+<body bgcolor="eedddd">
 	<h1>ATICLE TABLE</h1>
 	<hr />
 	<table
 		style="width: 100%; border-collaps: collaps; border: 1px solid black;">
-		<tr>
+		<tr bgcolor="orange">
 			<th>ARTICLE_ID</th>
 			<th>SBJ</th>
 			<th>CRT_DT</th>
@@ -42,7 +42,7 @@
 		<%
 			for (ArtclVO artclVO : artclVOs) {
 		%>
-		<tr>
+		<tr bgcolor="fffffff">
 			<td style="text-align: center;"><%=artclVO.getArticlId()%></td>
 			<td><a href="detail.jsp?artclId=<%=artclVO.getArticlId()%>">
 					<%=artclVO.getSubject()%></a></td>

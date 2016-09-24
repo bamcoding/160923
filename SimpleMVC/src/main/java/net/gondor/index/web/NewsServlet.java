@@ -33,7 +33,7 @@ public class NewsServlet extends HttpServlet {
 
 		List<NewsVO> newses = biz.getAllNewsesOf(20);
 		
-		String viewPath = "/WEB-INF/view/newsList.jsp";
+		String viewPath = "/WEB-INF/view/news.jsp";
 		RequestDispatcher rd = request.getRequestDispatcher(viewPath);
 		request.setAttribute("newses", newses);
 		

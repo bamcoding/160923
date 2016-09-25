@@ -35,7 +35,7 @@ public class NewsBizImpl implements NewsBiz{
 	@Override
 	public void deleteNewsAt(int newsId) {
 		// TODO Auto-generated method stub
-		return dao.deleteNews(newsId);;
+		dao.deleteNews(newsId);;
 	}
 
 }

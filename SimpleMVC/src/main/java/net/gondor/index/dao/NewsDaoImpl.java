@@ -8,12 +8,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.management.RuntimeErrorException;
+import net.gondor.index.vo.CategoryVO;
+import net.gondor.index.vo.JournalistVO;
+import net.gondor.index.vo.NewsVO;
 
-import net.gondor.vo.CategoryVO;
-import net.gondor.vo.JournalistVO;
-import net.gondor.vo.NewsVO;
-import oracle.jdbc.driver.DMSFactory;
 
 public class NewsDaoImpl implements NewsDao {
 

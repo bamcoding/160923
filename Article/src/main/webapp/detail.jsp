@@ -1,7 +1,7 @@
-<%@page import="net.homework1.vo.ArtclVO"%>
+<%@page import="net.homework1.dao.ArticleDaoImpl"%>
+<%@page import="net.homework1.vo.ArticleVO"%>
+<%@page import="net.homework1.dao.ArticleDao"%>
 <%@page import="java.util.List"%>
-<%@page import="net.homework1.dao.ArtclDaoImpl"%>
-<%@page import="net.homework1.dao.ArtclDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,11 +9,11 @@
 <%
 	String artclIdParam = request.getParameter("artclId");
 	int artclId = Integer.parseInt(artclIdParam);
-	ArtclDao dao = new ArtclDaoImpl();
-	List<ArtclVO> artclVOs = dao.getArtcls();
+	ArticleDao dao = new ArticleDaoImpl();
+	List<ArticleVO> artclVOs = dao.getArtcls();
 
 	int temp = 0;
-	for (ArtclVO artclVO : artclVOs) {
+	for (ArticleVO artclVO : artclVOs) {
 		temp = artclVO.getArticlId();
 		if (temp == artclId) {
 %>

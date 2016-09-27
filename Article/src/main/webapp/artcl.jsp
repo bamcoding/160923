@@ -1,6 +1,7 @@
-<%@page import="net.homework1.vo.ArtclVO"%>
-<%@page import="net.homework1.dao.ArtclDao"%>
-<%@page import="net.homework1.dao.ArtclDaoImpl"%>
+
+<%@page import="net.homework1.dao.ArticleDao"%>
+<%@page import="net.homework1.vo.ArticleVO"%>
+<%@page import="net.homework1.dao.ArticleDaoImpl"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -19,8 +20,8 @@
 	int categoryId = Integer.parseInt(categoryParam);
 	int parentCategoryId = Integer.parseInt(parentCategoryIdParam);
 
-	ArtclDao dao = new ArtclDaoImpl();
-	List<ArtclVO> artclVOs = dao.getArtcls();
+	ArticleDao dao = new ArticleDaoImpl();
+	List<ArticleVO> artclVOs = dao.getArtcls();
 %>
 
 <html>
@@ -40,7 +41,7 @@
 		</tr>
 
 		<%
-			for (ArtclVO artclVO : artclVOs) {
+			for (ArticleVO artclVO : artclVOs) {
 		%>
 		<tr bgcolor="fffffff">
 			<td style="text-align: center;"><%=artclVO.getArticlId()%></td>

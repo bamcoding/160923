@@ -8,15 +8,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.homework1.vo.ArtclVO;
+import net.homework1.vo.ArticleVO;
 
-public class ArtclDaoImpl implements ArtclDao {
+public class ArticleDaoImpl implements ArticleDao {
 
 	@Override
 	/**
 	 * DB 테이블에 있는 모든 데이터를 리스트로 반환한다.
 	 */
-	public List<ArtclVO> getArtcls() {
+	public List<ArticleVO> getArtcls() {
 		// TODO Auto-generated method stub
 
 		try {
@@ -38,11 +38,11 @@ public class ArtclDaoImpl implements ArtclDao {
 			pstmt = conn.prepareStatement(query.toString());
 			rs = pstmt.executeQuery();
 
-			List<ArtclVO> artcls = new ArrayList<ArtclVO>();
-			ArtclVO artclVO = null;
+			List<ArticleVO> artcls = new ArrayList<ArticleVO>();
+			ArticleVO artclVO = null;
 
 			while (rs.next()) {
-				artclVO = new ArtclVO();
+				artclVO = new ArticleVO();
 				artclVO.setArticlId(rs.getInt("ARTCL_ID"));
 				artclVO.setSubject(rs.getString("SBJ"));
 				artclVO.setContent(rs.getString("CONT"));
@@ -82,7 +82,7 @@ public class ArtclDaoImpl implements ArtclDao {
 	 * 하나의 VO를 파라미터로 받아서 DB 테이블에 삽입한다.
 	 */
 	@Override
-	public void insertArtcl(ArtclVO artclVO) {
+	public void insertArtcl(ArticleVO artclVO) {
 		// TODO Auto-generated method stub
 
 		try {
@@ -143,7 +143,7 @@ public class ArtclDaoImpl implements ArtclDao {
 	}
 
 	@Override
-	public void updateArtcl(ArtclVO artclVO) {
+	public void updateArtcl(ArticleVO artclVO) {
 		// TODO Auto-generated method stub
 
 		try {
@@ -250,7 +250,7 @@ public class ArtclDaoImpl implements ArtclDao {
 	}
 
 	@Override
-	public ArtclVO getArtclById(int artclId) {
+	public ArticleVO getArtclById(int artclId) {
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
 
@@ -275,7 +275,7 @@ public class ArtclDaoImpl implements ArtclDao {
 			pstmt.setInt(1, artclId);
 			rs = pstmt.executeQuery();
 
-			ArtclVO artclVO = new ArtclVO();
+			ArticleVO artclVO = new ArticleVO();
 
 			if (rs.next()) {
 				artclVO.setArticlId(rs.getInt("ARTCL_ID"));

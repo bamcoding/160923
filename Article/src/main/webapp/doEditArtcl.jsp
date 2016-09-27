@@ -1,6 +1,6 @@
-<%@page import="net.homework1.dao.ArtclDaoImpl"%>
-<%@page import="net.homework1.dao.ArtclDao"%>
-<%@page import="net.homework1.vo.ArtclVO"%>
+<%@page import="net.homework1.dao.ArticleDaoImpl"%>
+<%@page import="net.homework1.dao.ArticleDao"%>
+<%@page import="net.homework1.vo.ArticleVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
@@ -20,12 +20,12 @@
 		content = "내용이 없습니다.";
 	}
 
-	ArtclVO artclVO = new ArtclVO();
+	ArticleVO artclVO = new ArticleVO();
 	artclVO.setArticlId(artclId);
 	artclVO.setSubject(subject);
 	artclVO.setContent(content);
 
-	ArtclDao dao = new ArtclDaoImpl();
+	ArticleDao dao = new ArticleDaoImpl();
 	dao.updateArtcl(artclVO);
 
 	System.out.println("doEditArtcl is completed");

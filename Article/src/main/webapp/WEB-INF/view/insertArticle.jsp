@@ -8,11 +8,7 @@
 </head>
 <body bgcolor=eedddd>
 <h1>기사 등록하기</h1>
-<form name="insertArtcl" method="post" action="./doInsertArtcl.jsp">
-<!-- 
-	public String subject;
-	public String content;
- -->
+<form name="insertArtcl" method="post" action="./doInsert">
  
 <hr/>
 <table style="border:1px solid black; border-collaps:collaps; width:400px;height:400px">
@@ -25,7 +21,7 @@
 
 <hr/>
 <input type="submit" value="등록하기"/>
-<input type="button" value="취소" onclick="location.href='./artcl.jsp'"/>
+<input type="button" value="취소" onclick="location.href='./article'"/>
 </form>
 </body>
 </html>

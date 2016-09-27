@@ -1,6 +1,6 @@
 package net.homework1.vo;
 
-public class ArtclVO {
+public class ArticleVO {
 	public int articlId;
 	public String subject;
 	public String content;
